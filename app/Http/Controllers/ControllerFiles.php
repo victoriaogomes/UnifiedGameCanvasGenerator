@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Includes\MYPDF;
+use App\Includes\MyPdf;
 use App\Mail\sendMail;
 use Illuminate\Support\Facades\Mail;
 
-class controllerFiles extends Controller
+class ControllerFiles extends Controller
 {
     function readJson(Request $request){
         $jsonString = file_get_contents($request->jsonFile);
@@ -73,7 +73,7 @@ class controllerFiles extends Controller
 
     function generate_pdf($impact, $business, $concept, $player, $play, $flow, $core, $interaction){
         // create new PDF document
-        $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+        $pdf = new MyPdf(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
         // set document information
         $pdf->SetCreator(PDF_CREATOR);
         $pdf->SetAuthor('LEnDA - Laboratório de Entretenimento Digital Aplicado');
