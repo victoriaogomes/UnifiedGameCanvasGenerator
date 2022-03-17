@@ -1,0 +1,40 @@
+main {
+    flex: 1 0 auto
+}
+
+nav {
+    flex-shrink: 0;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.standard-btn {
+    background-color: white;
+    border-color: #8D51DE; 
+}
+
+.standard-btn:hover, .standard-btn:focus, .standard-btn:active, .standard-btn.active {
+    color: #fff;
+    background-color: #8D51DE;
+    border-color: #8D51DE; 
+}
+
+.primary-btn {
+    color: #fff;
+    background-color: #8D51DE;
+    border-color: #7b3acf; 
+}
+
+.primary-btn:hover, .primary-btn:focus, .primary-btn:active, .primary-btn.active {
+    color: rgb(255, 254, 254);
+    background-color: #6425BA;
+    border-color: #601dbe;
+}
